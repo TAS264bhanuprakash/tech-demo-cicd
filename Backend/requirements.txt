@@ -1,0 +1,10 @@
+fastapi 
+uvicorn 
+requests
+psycopg2-binary
+celery 
+redis
+python-dotenv
+email-validator
+pytest
+psycopg2
