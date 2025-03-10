@@ -4,7 +4,10 @@
 This project is a real-time railway train tracking system that fetches and displays train data from any selected city using the IRCTC API via RapidAPI. It is built using **FastAPI** for the backend and **React.js** for the frontend, with real-time updates powered by **Celery** and **Redis**. The application is deployed in a **Kubernetes cluster** with continuous deployment using **Azure DevOps** and **ArgoCD**.
 
 ---
-![Screenshot from 2025-03-10 10-44-28](https://github.com/user-attachments/assets/5ab7c005-8db8-4997-88d0-95b06e345408)
+## **Project Architecture**
+
+![Screenshot from 2025-03-10 22-32-11](https://github.com/user-attachments/assets/bf302ee1-7e7e-489e-85cb-daad90fef3b0)
+
 
 ---
 
@@ -29,8 +32,6 @@ This project is a real-time railway train tracking system that fetches and displ
 - **Monitoring & Alerts** (Azure DevOps pipeline monitoring with alerts)
 
 ---
-
-## **Project Architecture**
 
 ### **Backend - FastAPI**
 - Developed using **FastAPI**
@@ -89,20 +90,36 @@ This project is a real-time railway train tracking system that fetches and displ
 ### **3. Implementing Real-Time Updates with Celery & Redis**
 - Fetch train data every minute using Celery.
 - Store updates in **PostgreSQL**.
-- Use **WebSockets or API polling** to update the frontend.
+
 
 ### **4. Setting Up CI/CD with Azure DevOps**
-#### **Step 1: Configure GitHub Actions for Testing**
-- Implement **Unit Tests** for API endpoints.
-- Implement **Integration Tests** for database and API response validation.
 
-#### **Step 2: Azure DevOps Pipeline**
-1. Clone the GitHub repository to **Azure DevOps Repository**.
+
+#### **Step 1: Azure DevOps Pipeline**
+1. Push Code to **Azure DevOps Repository**.
+![Screenshot from 2025-03-10 22-00-02](https://github.com/user-attachments/assets/4eec4cb9-1241-4cee-817d-9e66dff174f1)
+
 2. Create a **Pipeline YAML file** to build and deploy the application.
 3. Use **Azure Virtual Machine** as the build agent.
-4. Push the Docker image to **Azure Container Registry**.
+4.**Unit Tests** for API endpoints.
+5.**Integration Tests** for database and API response validation.
+   ![Screenshot from 2025-03-10 20-26-03](https://github.com/user-attachments/assets/61f494cb-576e-4c4b-823b-d568b5340086)
 
-### **5. Deploying to Kubernetes with ArgoCD**
+6. Push the Docker image to **Azure Container Registry**.
+   ![Screenshot from 2025-03-10 22-09-23](https://github.com/user-attachments/assets/e7620a03-345b-45f7-87c1-57baae2d8f58)
+
+   ![Screenshot from 2025-03-10 22-09-29](https://github.com/user-attachments/assets/1a48caf4-d76a-4623-9173-1cfce627dbf2)
+
+
+### **5. Monitoring and Alerts in Azure DevOps**
+- Track pipeline execution in Azure DevOps.
+  ![Screenshot from 2025-03-10 22-11-55](https://github.com/user-attachments/assets/049b0eed-00cc-4dd3-8812-38bb73d241fa)
+
+- Set up **alerts for failed jobs**.
+![Screenshot from 2025-03-10 18-58-34](https://github.com/user-attachments/assets/3c1eeeaf-59db-4190-b6c2-e087f1d1611f)
+
+- Notify through email or webhook when issues arise.
+### **6. Deploying to Kubernetes with ArgoCD**
 - Install **ArgoCD** on the Kubernetes cluster.
 - Monitor the deployment file for changes.
 - Auto-deploy updated images.
@@ -110,11 +127,9 @@ This project is a real-time railway train tracking system that fetches and displ
   - **Backend (FastAPI)**
   - **Frontend (React.js)**
   - **Redis**
+![Screenshot from 2025-03-10 18-40-45](https://github.com/user-attachments/assets/33e55c64-c263-4158-b030-01e38b6cbe31)
 
-### **6. Monitoring and Alerts in Azure DevOps**
-- Track pipeline execution in Azure DevOps.
-- Set up **alerts for failed jobs**.
-- Notify through email or webhook when issues arise.
+
 
 ---
 
