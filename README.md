@@ -10,10 +10,20 @@ This project is a real-time railway train tracking system that fetches and displ
 
 ## **Features**
 - **User Login** (Basic login without authentication)
+![Screenshot from 2025-03-10 12-51-20](https://github.com/user-attachments/assets/02bc1178-3500-4a06-aa17-5349a4cb15fd)
+
 - **City Selection** (Choose a city to track trains)
+  ![Screenshot from 2025-03-10 12-53-55](https://github.com/user-attachments/assets/80a4fb25-853c-4c76-a2eb-7882490c8dd7)
+
 - **Station Selection** (Choose a station within the selected city)
-- **Train Tracking** (Fetch train schedules and live tracking for one day)
+  ![Screenshot from 2025-03-10 15-06-25](https://github.com/user-attachments/assets/8c04f191-550e-4fea-865d-f04fd4081550)
+
+- **Train Tracking for Stations** (Fetch train schedules and live tracking for one day)
+  ![Screenshot from 2025-03-10 15-08-06](https://github.com/user-attachments/assets/b6515598-2a9c-4a78-8e49-48ba4b7ff223)
+
 - **Real-Time Updates** (Celery tasks update train positions every minute)
+  ![Screenshot from 2025-03-10 15-10-09](https://github.com/user-attachments/assets/a297edf7-7c3e-46b5-b425-b0b45ddf96ff)
+
 - **Database Storage** (PostgreSQL hosted on AWS)
 - **Continuous Deployment** (CI/CD with Azure DevOps and Kubernetes)
 - **Monitoring & Alerts** (Azure DevOps pipeline monitoring with alerts)
